@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="card-columns m-5" *ngIf="photos">
+        <div class="card  select" *ngFor="let photo of photos" (dblclick)="selectedPhoto(photo._id)">
+            <img [src]=" url + photo.imagePath" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ photo.title }}</h5>
+                <p class="card-text">{{ photo.description | slice: 0:50 }}</p>
+            </div>
+        </div>
+    </div>
+</div>

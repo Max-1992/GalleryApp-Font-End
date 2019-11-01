@@ -1,0 +1,22 @@
+<div class="col-lg-4 mx-auto mb-4">
+    <div class="card">
+        <div class="card-header text-center bg-info">
+            <h1 class="h4 text-white">Upload Photo</h1>
+        </div>
+        <div class="card-body">
+            <form (submit)="addPhoto(title, description)">
+                <div class="form-group">
+                    <input #title type="text" class="form-control" placeholder="Photo's Title" required>
+                </div>
+                <div class="form-group">
+                    <textarea #description class="form-control" placeholder="Photo's Description" cols="30" rows="4" required></textarea>
+                </div>
+                <input #photoInput type="file" class="d-none" (change)="onPhotoSelectid($event)">
+                <img [src]=" photoSelected || 'assets/img/no-images2.png' " class="img-fluid mb-3" [ngStyle]="{'width': '100%'}" (click)="photoInput.click()">
+                <button type="submit" class="btn btn-info btn-block">
+                    Add
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

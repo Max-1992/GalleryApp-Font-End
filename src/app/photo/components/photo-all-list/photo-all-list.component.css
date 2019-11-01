@@ -1,0 +1,7 @@
+.select {
+    cursor: pointer;
+}
+
+.select:hover {
+    border: 1px solid lightskyblue
+}
